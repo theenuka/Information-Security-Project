@@ -11,7 +11,8 @@ def test_standard_aes_known_vector():
     ct = bytes.fromhex("69c4e0d86a7b0430d8cdb78070b4c55a")
     assert AES128(key).encrypt_block(pt) == ct
 
-
+# Check that encryption followed by decryption returns the original plaintext
+# for both the key-dependent S-Box and the optimized S-Box
 def test_dynamic_roundtrip():
     key = bytes.fromhex("00112233445566778899aabbccddeeff")
     pt = b"sixteen byte txt"
