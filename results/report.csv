@@ -1,0 +1,4 @@
+nonlinearity,sac_error,bic_error,differential_uniformity,throughput_MBps,variant
+112,0.02637,0.05215,4,0.066,standard_aes
+102,0.03564,0.07636,14,0.064,raw_logistic_dynamic
+112,0.02368,0.05115,4,0.063,optimized_logistic_dynamic
