@@ -20,7 +20,8 @@ def test_dynamic_roundtrip():
         aes = AES128(key, sbox)
         assert aes.decrypt_block(aes.encrypt_block(pt)) == pt
 
-
+# Ensure the optimized S-Box maintains AES security properties while improving
+# the Strict Avalanche Criterion (SAC) behavior
 def test_optimized_preserves_core_aes_sbox_strength():
     base, opt = analyze_sbox(S_BOX), analyze_sbox(make_optimized_sbox())
     assert opt["nonlinearity"] == base["nonlinearity"]
