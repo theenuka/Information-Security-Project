@@ -4,7 +4,7 @@ from chaos_aes.chaos_sbox import make_sbox
 from chaos_aes.metrics import analyze_sbox
 from chaos_aes.optimized_sbox import make_optimized_sbox
 
-
+# Verify AES encryption using the official AES-128 test vector from FIPS-197
 def test_standard_aes_known_vector():
     key = bytes.fromhex("000102030405060708090a0b0c0d0e0f")
     pt = bytes.fromhex("00112233445566778899aabbccddeeff")
