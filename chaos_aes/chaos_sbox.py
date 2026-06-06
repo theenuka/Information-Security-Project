@@ -30,4 +30,4 @@ def inverse_sbox(sbox: list[int]) -> list[int]:   #since s-box is bijective, con
     inv = [0] * 256
     for i, v in enumerate(sbox):
         inv[v] = i
-    return inv
+    return inv #return the inverse s-box
