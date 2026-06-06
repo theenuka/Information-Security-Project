@@ -16,13 +16,13 @@ This project matches the submitted proposal and the project description: select 
 - Experiment size: configurable; default is 10,000 plaintext blocks
 - Exclusions: no CBC/GCM modes, no hardware implementation, no side-channel analysis
 
-## Important design decision
+## Important design decision.
 
 A naive logistic-map S-Box is included as `raw_logistic_dynamic`. It proves that simply sorting chaotic values is not enough.
 
 The final proposed version is `optimized_chaos_affine`. It uses chaos-derived affine-equivalent generation to preserve the strongest AES S-Box properties while allowing key-dependent dynamic substitution. This keeps nonlinearity and differential uniformity at AES level while improving avalanche-related metrics in the provided experiment.
 
-## Run
+## Run.
 
 ```bash
 pip install -r requirements.txt
